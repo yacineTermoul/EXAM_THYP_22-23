@@ -21,7 +21,7 @@
 <body>
     <h3>id name</h3>
     <script>
-    d3.json("items.json",function(data){
+    d3.json("items.json",function getData(data){
 
     var canvas = d3.select("body")
 
@@ -29,7 +29,7 @@
             .data(data)
             .enter()
                 .append("p")
-                .text(function(d) { return d["o:id"]+' '+d["o:title"] ;})
+                .text(function showItems(d) { return d["o:id"]+' '+d["o:title"] ;})
                 
 });
     </script>
