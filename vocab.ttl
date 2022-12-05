@@ -7,7 +7,7 @@
 @prefix vocab: <https://relationEntreChercheurs.fr/onto/vocab#> .
 @prefix ma: <http://www.w3.org/ns/ma-ont#>.
 
-<https://relationEntreChercheurs.fr/onto/vocab##> a owl:Ontology ;
+<https://relationEntreChercheurs.fr/onto/vocab#> a owl:Ontology ;
     dcterms:title "relationEntreChercheurs" .
 
 vocab:Chercheur a rdfs:Class ;
@@ -35,6 +35,11 @@ vocab:publiePar a rdf:Property ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
+vocab:nomPublication a rdf:Property ;
+    rdfs:label "nom publication" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
 vocab:neLe a rdf:Property ;
     rdfs:label "Date de naissance" ;
     rdfs:domain o:Resource ;
@@ -42,5 +47,25 @@ vocab:neLe a rdf:Property ;
 
 vocab:enseigneA a rdf:Property ;
     rdfs:label "Enseigne a" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+vocab:nom a rdf:Property ;
+    rdfs:label "Nom chercheur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+vocab:nomUniv a rdf:Property ;
+    rdfs:label "Nom universite" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+vocab:adresseU a rdf:Property ;
+    rdfs:label "Adresse universite" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+vocab:aEnseignant a rdf:Property ;
+    rdfs:label "Nombre Enseignant" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
