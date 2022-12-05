@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <title>Items API</title>
+    <style>
+        @media screen and (min-width: 1024) {
+
+          }
+        @media screen and (min-width: 900px) {
+
+        }
+        @media screen and (min-width: 640) {
+
+          }
+    </style>
+</head>
+<body>
+    <script>
+    d3.json("items.json",function(data){
+
+    var canvas = d3.select("body")
+
+    canvas.selectAll("p")
+            .data(data)
+            .enter()
+                .append("p")
+                .attr("width",50)
+                .attr("height",50)
+                .text(function(d) { return d["o:id"]+' '+d["o:title"] ;})
+});
+    </script>
+
+</body>
+</html>
