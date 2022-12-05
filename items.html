@@ -19,6 +19,7 @@
     </style>
 </head>
 <body>
+    <h3>id name</h3>
     <script>
     d3.json("items.json",function(data){
 
@@ -28,9 +29,8 @@
             .data(data)
             .enter()
                 .append("p")
-                .attr("width",50)
-                .attr("height",50)
                 .text(function(d) { return d["o:id"]+' '+d["o:title"] ;})
+                
 });
     </script>
 
